@@ -1,0 +1,16 @@
+{
+  "name": "pandari-yathra-server",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node src/selftest.js",
+    "cli": "node src/cli.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3"
+  }
+}

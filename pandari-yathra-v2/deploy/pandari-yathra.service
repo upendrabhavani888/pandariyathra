@@ -1,0 +1,21 @@
+[Unit]
+Description=Pandari Yathra
+After=network.target
+
+[Service]
+User=pandari
+Group=pandari
+WorkingDirectory=/opt/pandari-yathra/server
+EnvironmentFile=/etc/pandari-yathra.env
+ExecStart=/usr/bin/node src/index.js
+Restart=always
+RestartSec=3
+# keep it boxed in
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/pandari-yathra
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,17 @@
+{
+  "name": "pandari-yathra",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Pandari Yathra: group management for pilgrimage trips. One shared database, real sign-in, the full set of screens.",
+  "scripts": {
+    "setup": "npm --prefix server install --omit=dev",
+    "start": "npm --prefix server start",
+    "test": "npm --prefix server test",
+    "build:web": "node tools/build-web.mjs",
+    "build:demo": "node tools/build-web.mjs --demo",
+    "cli": "npm --prefix server run cli --"
+  },
+  "devDependencies": {
+    "pdfjs-dist": "3.11.174"
+  }
+}

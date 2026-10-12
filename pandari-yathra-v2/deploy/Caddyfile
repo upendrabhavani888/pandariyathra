@@ -1,0 +1,10 @@
+# Replace the name with your own domain. Caddy gets and renews the HTTPS certificate by itself,
+# as long as the domain's DNS points at this server and ports 80 and 443 are open.
+yatra.example.org {
+	encode gzip
+	header Strict-Transport-Security "max-age=31536000"
+	request_body {
+		max_size 150MB
+	}
+	reverse_proxy 127.0.0.1:4000
+}
